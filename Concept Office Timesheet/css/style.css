@@ -1,0 +1,347 @@
+@charset "UTF-8";
+
+.container{
+	width:100%;
+}
+.navbar{
+	background-color:#4F4741;
+	height:70px;
+	margin-bottom:0;
+}
+.logo-container img{
+	height:90%;
+	padding-top:10px;
+	cursor:pointer;
+}
+.navbar .container, .logo-container, .navbar .container .row{
+	height:inherit;
+}
+.mobile-nav, .desktop-nav{
+	height:inherit;
+	color:#fff;
+}
+#mobileSettings{
+	display:none;
+	height:200px;
+	position:relative;
+	z-index:1023;
+	border-bottom:1px #999999 solid;
+	background-color:#f1f1f1;
+}
+.mobile-nav{
+	background-image:url(../img/moreoptions.png);
+	background-repeat:	no-repeat;
+	background-position: 89% 50%;
+}
+.heightexpand{
+	height:1000px;
+}
+.navbar-fixed-top{
+	position:static;
+}
+#mobileSettings .row:first-of-type{
+	margin-top:15px;
+	height:50px;
+}
+#mobileSettings .row div, #mobileProfileImage img, #desktopProfileImage img{
+	height:100%;
+	border-radius:45px;
+}
+#mobileProfileName{
+	font-size:19px;
+	font-family: 'Open Sans', sans-serif;
+}
+#mobileProfileImage{
+	text-align:right;
+}
+#mobileGroupSelect{
+	margin:20px -15px;	
+}
+#mobileGroupSelect select{
+	width:100%;
+	padding-top:10px;
+	padding-bottom:10px;
+	border-radius:2px;
+	font-size:125%;
+}
+#mainAvailabilityChart > .row{
+	height:50px;
+	border-bottom:1px #999999 solid;
+	overflow:hidden;
+	transition:height .2s ease-in-out;
+}
+#mainAvailabilityChart > .row > div:not(.extraEmployeeInfo){
+	height:50px;
+}
+#mainAvailabilityChart h2{
+	font-size:125%;
+	font-family: 'Open Sans', sans-serif;
+	border-bottom:1px #f2f2f2 solid;
+	padding-bottom:5px;
+	margin-bottom:5px;
+	margin-top:0;
+}
+#mainAvailabilityChart ul{
+	margin:0;
+	padding:0;
+}
+#mainAvailabilityChart li{
+	list-style-type:none;
+}
+.availabilitySlider{
+	width:80%;
+	max-width:60px;
+	margin-left:auto;
+	position: relative;
+	top: 20%;
+}
+.availabilityName{
+	position: relative;
+	top: 25%;
+	font-size: 125%;
+	cursor:pointer;
+}
+.availabilitySliderLine{
+	width:100%;
+	height:1px;
+	border-bottom:1px #999999 solid;
+	position:relative;
+	top:13px;
+	z-index:14;
+}
+.availabilitySliderCircle{
+	height:20px;
+	width:20px;
+	border-radius:45px;
+	border:1px #999999 solid;
+	background-color:rgba(54,213,97,1.00);
+	position:relative;
+	z-index:15;
+	left:0;
+	text-align:center;
+	font-weight:bold;
+	color:#fff;
+	line-height:23px;
+	cursor:default;
+	transition:all .5s ease-in-out;
+	cursor:pointer;
+}
+.notAvailable{
+	left:60%;
+	background-color:rgba(255,56,43,1.00);
+}
+.extraEmployeeInfo{
+	height:70%;
+}
+.extraEmployeeInfo div{
+	height:100%;
+}
+.extraEmployeeInfo .row > div{
+	height:100%;
+}
+.timerHide{
+	overflow:hidden;
+	height:0px;
+	width:0px;
+	opacity:0;
+}
+form{
+	height:100%;
+}
+textarea{
+	height:68%;
+	width:90%;
+	resize:none;
+}
+.currentTask div{
+	padding-top:5px;
+	overflow:hidden;
+	height:90%;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+	.mobile-nav{
+		display:none;
+	}
+	.navbar-fixed-top{
+		position:fixed;
+	}
+	#clearNavBar{
+		margin-top:80px;
+	}
+	#mainAvailabilityChart ul{
+		margin:0 1px;
+		padding:10px;
+		border:1px #999999 solid;
+		border-top:none;
+		border-bottom:none;
+		height:90%;
+	}
+	#mainAvailabilityChart li{
+		list-style-type:none;
+	}
+	#desktopProfileImage{
+		text-align:left;
+		padding-right:0;
+		font-size:18px;
+		height:100%;
+		line-height:46px;
+		transition:background-color .2s ease-in-out;
+		cursor:pointer;
+	}
+	#desktopProfileImage img{
+		height:55%;
+	}
+	#desktopNavName{
+		margin-top:5%;
+		display:inline-block;
+	}
+	#desktopNavGroupContainer{
+		position:relative;
+	}
+	#desktopNavGroupButton{
+		height:100%;
+		background-image: url('../img/groups_icon.png');
+		background-repeat:no-repeat;
+		background-size:24px;
+		background-position:12% 50%;
+		padding-left:52px;
+		line-height:70px;
+		font-size:18px;
+		transition:background-color .2s ease-in-out;
+		cursor:pointer;
+	}
+	#desktopNavGroupButton:hover, #desktopProfileImage:hover{
+		background-color:#3F3731;
+	}
+	.row div[role="progressbar"] .timer{
+		height:90%;
+		background:url(../img/clock.png) no-repeat;
+		background-size:contain;
+		background-position:center center;
+		transition:all .5s ease-in;
+	}
+	.row div[role="progressbar"] .timer .timerText{
+		height:auto;
+		display:inline-block;
+		width:auto;
+		font-size:24px;
+		text-align:justify;		
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-transform: translate(-50%, -50%);
+	}
+	.timerText span{
+		transition:all .1s ease-in;
+	}
+	.row div[role="progressbar"] *{
+		cursor:default;
+	}
+	.returning{
+		cursor:default;
+	}
+	.returning span{
+		display:inline-block;
+		font-size:18px;
+		position:relative;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		-webkit-transform:translate(-50%,-50%);	
+	}
+	.expandArrow{
+		padding-right:0;
+	}
+	.expandArrow img{
+		cursor:pointer;
+		position:relative;
+		height:50%;
+		top:25%;
+		float:right;
+		opacity:.7;
+		transition:transform .2s ease;
+	}
+	.expandArrowLeft{
+		transform: rotate(90deg);
+		-webkit-transform: rotate(90deg);
+	}
+	.listActions > div{
+		height:auto;
+		padding-top:26px;
+	}
+	.listActions > div:first-of-type{
+		padding-top:0;
+	}
+	.listActions > div > img{
+		opacity:.7;
+		position:relative;
+		left:40%;
+		cursor:pointer;
+	}
+	.dropdown-menu{
+		color:#000;
+		border-radius:3px;
+		top:60px;
+		border:1px #999999 solid;
+		box-shadow:none;
+		left:-13%;
+		width:280px;
+		padding:0;
+	}
+	.dropdown-menu:before {
+		position: absolute;
+		top: -7px;
+		left: 50%;
+		transform:translateX(-50%);
+		-webkit-transform:translateX(-50%);
+		display: inline-block;
+		border-right: 7px solid transparent;
+		border-bottom: 7px solid #ccc;
+		border-left: 7px solid transparent;
+		border-bottom-color: #fff;
+		content: '';
+	}
+	.dropdown-menu li{
+		padding:10px 20px;
+		height: 70px;
+		font-family:'Open Sans';
+		font-weight:400;
+		transition:all .4s ease-in-out;
+		cursor:pointer;
+	}
+	.dropdown-menu li:hover{
+		background-color:#ddd;
+	}
+	.dropdown-menu li img{
+		width:30px;
+	}
+	.dropdown-menu li div:first-of-type{
+		margin-right:20px;
+	}
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	.container{
+		width:960px;
+	}
+	.logo-container{
+		padding-left:0;
+	}
+	#mainAvailabilityChart > .row > :first-child, #mainAvailabilityChart > .row > :last-child{
+		padding-left:0;
+		padding-right:0;
+	}
+	#mainAvailabilityChart ul{
+		margin:0;
+	}
+	.dropdown-menu li img{
+		width:50px;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}

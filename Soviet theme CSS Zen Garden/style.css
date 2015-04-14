@@ -1,0 +1,384 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+
+/* basic elements */
+a{
+	text-decoration:none;
+	color:rgba(50,50,50,1.00);
+}
+a:hover{
+	text-decoration:underline;
+}
+@font-face{
+	font-family: ror;
+	src:url(ror.ttf);
+}
+@font-face{
+	font-family: kp;
+	src:url(kp.ttf);
+}
+@font-face{
+	font-family:blzee;
+	src:url(blzee.ttf);
+}
+@font-face{
+	font-family:ml;
+	src:url(ml.ttf);
+}
+.intro header[role="banner"]{
+	width:100%;
+	min-width:470px;
+	text-align:center;
+	line-height:0;
+	opacity:.8;
+	position:absolute;
+}
+.intro h1{
+	font-family:ml;
+	color: rgba(130,0,0,.6);
+	/*text-shadow:
+      -1px 1px 0 #ffbf4a,
+     -1px -1px 0 #ffbf4a,  
+      1px -1px 0 #ffbf4a,
+       1px 1px 0 #ffbf4a;*/
+	font-size: 106px;
+}
+.intro h2{
+	color: rgba(130,0,0,.6);
+	opacity:.8;
+	font-size:36px;
+	font-family:kp;
+	position:relative;
+	bottom:20px;
+}
+html {
+	margin: 0;
+	padding: 0;
+	}
+.summary, .preamble, .participation, .explanation, .benefits, .requirements{
+	background-image:url(images/paper.png);
+	background-size:contain;
+	padding:50px;
+	background-repeat:no-repeat;
+	position:absolute;
+	height: 522px;
+	width: 387px;
+	padding: 50px;
+	color: #000;
+	font-size: 13px;
+	transition: transform .6s ease-in-out;
+}
+.requirements:hover, .requirements:active{
+	transform: translateX(103%) translateY(-60%);
+	-webkit-transform: translateX(103%) translateY(-60%);
+}
+.requirements{
+	height:880px;
+	width:615px;
+	font-size:115%;
+	padding:60px;
+	transform: translateY(25%) translateX(195%);
+	-webkit-transform: translateY(25%) translateX(195%);
+}
+.participation:hover, .participation:active{
+	transform: translateX(125%) translateY(-30%);
+	-webkit-transform: translateX(125%) translateY(-30%);
+}
+.participation{
+	width: 475px;
+	height: 675px;
+	font-size: 115%;
+	top:45%;
+	left:7%;
+	padding:50px;
+}
+.summary:hover, .summary:active{
+	transform:translateX(195%) translateY(45%);
+	-webkit-transform:translateX(195%) translateY(45%);
+}
+.summary{
+	font-size:18px;
+	transform:translateZ(0);
+	-webkit-transform:translateZ(0);
+}
+.benefits:hover, .benefits:active{
+	transform:translateX(175%) translateY(-80%);
+	-webkit-transform:translateX(175%) translateY(-80%);
+}
+.benefits{
+	height:600px;
+	width:420px;
+	font-size:15px;
+	top:70%;
+}
+.explanation:hover, .explanation:active{
+	transform:translateX(170%);
+	-webkit-transform:translateX(170%);
+}
+.explanation{
+	top: 30%;
+	font-size: 115%;
+	height: 610px;
+	width: 435px;
+}
+.preamble:hover, .preamble:active{
+	transform:translateX(145%) translateY(15%);
+	-webkit-transform:translateX(145%) translateY(15%);
+}
+.preamble{
+	height: 590px;
+	width: 415px;
+	padding: 50px;
+	color: #000;
+	font-size: 115%;
+	left: 8%;
+	bottom:30%;
+}
+*, *:before, *:after{ 
+    box-sizing: border-box; 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+}
+.design-selection > nav > ul > li{
+	display:block;
+	height:200px;
+	background-color:#bcae7c;
+	background-image:url(BG.png);
+	background-repeat:repeat-x;
+	border-radius: 6px;
+	padding-left:20px;
+	padding-top:20px;
+	width:300px;
+	position:relative;
+	left:100%;
+	margin-top:-115px;
+	border:thin #000 solid;
+	color:#000;
+	transition: all .6s ease-in-out;
+}
+.design-selection > nav > ul > li > a{
+	margin-top:5px;
+	font-size:150%;
+	width:70%;
+	font-family:blzee;
+	display:block;
+	color:#000;
+}
+.design-selection > nav > ul > li > a:link:last-of-type{
+	background-color:#000;
+	text-decoration:none;
+	transition: background-color .4s ease-in-out;
+}
+.design-selection > nav > ul > li > a:link:last-of-type:hover{
+	background-color:rgba(0,0,0,0.2);
+	text-decoration:none;
+}
+.design-selection > nav > ul > li:first-of-type{
+	margin-top:0px;	
+}
+.design-selection > nav > ul > li:hover{
+	left:-155%;	
+}
+.design-selection > nav > ul > li::before{
+	font-family:ror;
+	color:#cfe0ea;
+	content: "";
+	line-height: 28px;
+	text-align: right;
+	font-size: 20px; 
+	float:right; 
+    position: relative; 
+    height: 0px; 
+    width: 156px; 
+    top: 64px; 
+	right: 233px;
+    -webkit-transform: rotate(270deg); 
+    transform: rotate(270deg); 
+    border-top: 0px transparent; 
+    border-left: 20px solid transparent; 
+    border-right: 20px solid transparent; 
+    border-bottom: 25px solid #4f6213; 
+}
+.design-selection > nav > ul > li:nth-of-type(1)::before{
+	content:"1";
+	border-bottom: 25px solid #b43c00;
+}
+.design-selection > nav > ul > li:nth-of-type(2)::before{
+	content:"2";
+	border-bottom: 25px solid #4f6213;
+}
+.design-selection > nav > ul > li:nth-of-type(3)::before{
+	content:"3";
+	border-bottom: 25px solid #271d0b;
+}
+.design-selection > nav > ul > li:nth-of-type(4)::before{
+	content:"4";
+	border-bottom: 25px solid #b55347;
+}
+.design-selection > nav > ul > li:nth-of-type(5)::before{
+	content:"5";
+	border-bottom: 25px solid #ad944e;
+}
+.design-selection > nav > ul > li:nth-of-type(6)::before{
+	content:"6";
+	border-bottom: 25px solid #57351a;
+}
+.design-selection > nav > ul > li:nth-of-type(7)::before{
+	content:"7";
+	border-bottom: 25px solid #464646;
+}
+.design-selection > nav > ul > li:nth-of-type(8)::before{
+	content:"8";
+	border-bottom: 25px solid #969b82;
+}
+@-webkit-keyframes star{
+	from{ 
+		transform: translate(-50%,-50%) rotate(0deg);
+		-webkit-transform: translate(-50%,-50%) rotate(0deg); 
+	}
+	to { 
+		transform: translate(-50%,-50%) rotate(360deg);
+		-webkit-transform: translate(-50%,-50%) rotate(360deg); 
+	}
+}
+body {
+	font: 75% blzee;
+	line-height: 1.88889;
+	color: #ffbf4a; 
+	background-image: url('images/h.png'), url('images/lenin.png'), url('images/concrete.jpg');
+	background-repeat:no-repeat, no-repeat, no-repeat;
+	background-size:200px, 400px, cover;
+	background-attachment:fixed;
+	background-position: 50% 50%, 85% 0%, center;
+	margin: 0; 
+	position:static;
+	padding: 0;
+	overflow-x:hidden;
+	}
+body::before{
+	content:"";
+	height:700px;
+	width:700px;
+	top:52%;
+	left:50%;
+	position: fixed;
+	background-image:url('images/star.png');
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-position:50% 50%;
+	transform: translate(-50%,-50%) rotate(0deg);
+	-webkit-transform: translate(-50%,-50%) rotate(0deg);
+	-webkit-animation: star 60s linear infinite;
+	animation: star 60s linear infinite;
+	opacity:.75;		
+}
+p { 
+	margin-top: 0;
+	}
+h3 { 
+	font: bold normal 1.4em kp;
+	letter-spacing: 1px; 
+	margin-bottom: 5%; 
+	color: #000;
+}
+abbr {
+	border-bottom: none;
+}
+
+
+/* specific divs */
+.page-wrapper { 
+	margin: 0; 
+	position: relative;
+	perspective:1px;
+	-webkit-perspective:1px;
+	height:100vh;
+	overflow-x:hidden;
+	overflow-y:hidden;
+}
+.supporting {	
+	padding-left: 10px; 
+	margin-bottom: 40px;
+	margin-top:600px;
+}
+footer { 
+	text-align: center;
+	font-size:145%;
+	font-family:ror;
+	z-index:-1;
+	position:absolute;
+	right:40%;
+	top:95%;
+}
+footer a{
+	color: rgba(130,0,0,.5);
+	padding:5px 15px;
+	font-size:115%;
+}
+.sidebar {
+	margin-left: 600px; 
+	position: absolute; 
+	top: 4%; 
+	right: 0;
+}
+.sidebar .wrapper { 
+	font: 10px verdana, sans-serif; 
+	padding: 10px; 
+	width: 130px; 
+}
+.sidebar h3{
+	display:none;
+}
+.sidebar ul {
+	margin: 0;
+	padding: 0;
+}
+.sidebar li { 
+	display: inline-block; 
+	padding-top: 5px; 
+	margin-bottom: 5px;
+	list-style-type: none;
+}
+.design-archives{
+	right: 260%;
+	bottom: 50%;
+	position: absolute;
+}
+.zen-resources{
+	position: absolute;
+	right: 260%;
+	bottom: 28%;
+}
+.design-archives ul, .zen-resources ul{
+	width: 200px;
+	font-size:20px;
+	font-family:ror;
+	text-transform:uppercase;
+}
+.viewall{
+	width:220px;
+}
+.zen-resources li{
+	width:300px;
+}
+.design-archives a, .zen-resources a{
+	color: rgba(130,0,0,0.50);
+}
+.design-archives ul li, .zen-resources ul li{
+	display:inline-block;
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+
+
+
+}
